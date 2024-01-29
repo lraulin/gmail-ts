@@ -13,12 +13,16 @@
   "license": "ISC",
   "devDependencies": {
     "@tsconfig/node21": "^21.0.1",
+    "@types/better-sqlite3": "^7.6.9",
     "@types/node": "^20.11.10",
+    "kysely-codegen": "^0.11.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",
+    "better-sqlite3": "^9.3.0",
     "googleapis": "^105.0.0",
-    "sqlite": "^5.1.1"
+    "kysely": "^0.27.2"
   }
 }

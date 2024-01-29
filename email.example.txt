@@ -1,0 +1,55 @@
+{ id: '18d43c3a9fef0453', threadId: '18d4211410bc32c6' }
+{
+  config: {
+    url: 'https://gmail.googleapis.com/gmail/v1/users/me/messages/18d43c3a9fef0453',
+    method: 'GET',
+    userAgentDirectives: [ [Object] ],
+    paramsSerializer: [Function (anonymous)],
+    headers: {
+      'x-goog-api-client': 'gdcl/6.0.4 gl-node/21.6.1',
+      'Accept-Encoding': 'gzip',
+      'User-Agent': 'google-api-nodejs-client/6.0.4 (gzip)',
+      Authorization: 'Bearer ya29.a0AfB_byCJrAyOPEoNHbknbFV12J8hjCL9nmTVSb-fuVf87-Ie8-Tfq8_7UJKDdtF6izi_NUre6IJNUTH4BOjfxD2kULFES4aw91uNdFbgKR5X_Dy6zQYzvS_mKbs6LUVGRoq-w7O-yHAGgSehd66Nl4PEGBSWZzF0-2yhaCgYKASMSARISFQHGX2MilmgJ4riWt3SafaU1MnA1NQ0171',
+      Accept: 'application/json'
+    },
+    params: {},
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    responseType: 'json'
+  },
+  data: {
+    id: '18d43c3a9fef0453',
+    threadId: '18d4211410bc32c6',
+    labelIds: [ 'IMPORTANT', 'CATEGORY_PERSONAL', 'INBOX' ],
+    snippet: '‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌',
+    payload: {
+      partId: '',
+      mimeType: 'multipart/alternative',
+      filename: '',
+      headers: [Array],
+      body: [Object],
+      parts: [Array]
+    },
+    sizeEstimate: 45030,
+    historyId: '13787911',
+    internalDate: '1706238910000'
+  },
+  headers: {
+    'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+    'cache-control': 'private',
+    'content-encoding': 'gzip',
+    'content-type': 'application/json; charset=UTF-8',
+    date: 'Mon, 29 Jan 2024 21:18:26 GMT',
+    server: 'ESF',
+    'transfer-encoding': 'chunked',
+    vary: 'Origin, X-Origin, Referer',
+    'x-content-type-options': 'nosniff',
+    'x-frame-options': 'SAMEORIGIN',
+    'x-xss-protection': '0'
+  },
+  status: 200,
+  statusText: 'OK',
+  request: {
+    responseURL: 'https://gmail.googleapis.com/gmail/v1/users/me/messages/18d43c3a9fef0453'
+  }
+}
