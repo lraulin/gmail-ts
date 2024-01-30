@@ -1,28 +1,24 @@
-import { Generated, Insertable, Selectable, Updateable } from "kysely";
+import { ColumnType, Insertable, Selectable, Updateable } from "kysely";
 
 export interface Database {
   email: EmailTable;
-  expense: ExpenseTable;
 }
 
-export interface EmailTable {
-  id: Generated<number>;
+export interface EmailData {
+  id: string;
   to: string;
   from: string;
-  date: Date;
+  date: string;
+  subject: string;
   text: string;
-  created_at: Date;
+  amount: number;
 }
 
-export interface ExpenseTable {
-  id: Generated<number>;
-  amount: number;
+export interface EmailTable extends EmailData {
+  created_at: ColumnType<string, string, never>;
+  modified_at: string;
 }
 
 export type Email = Selectable<EmailTable>;
 export type NewEmail = Insertable<EmailTable>;
 export type EmailUpdate = Updateable<EmailTable>;
-
-export type Expense = Selectable<ExpenseTable>;
-export type NewExpense = Insertable<ExpenseTable>;
-export type ExpenseUpdate = Updateable<ExpenseTable>;

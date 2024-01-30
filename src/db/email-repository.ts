@@ -1,7 +1,7 @@
 import { db } from "./database";
-import { EmailUpdate, Email, NewEmail } from "./types";
+import { EmailUpdate, Email, EmailData } from "./types";
 
-export async function findEmailById(id: number) {
+export async function findEmailById(id: string) {
   return await db
     .selectFrom("email")
     .where("id", "=", id)
@@ -23,19 +23,27 @@ export async function findEmails(criteria: Partial<Email>) {
   return await query.selectAll().execute();
 }
 
-export async function updateEmail(id: number, updateWith: EmailUpdate) {
-  await db.updateTable("email").set(updateWith).where("id", "=", id).execute();
+export async function updateEmail(id: string, updateWith: EmailUpdate) {
+  await db
+    .updateTable("email")
+    .set({ ...updateWith, modified_at: new Date().toISOString() })
+    .where("id", "=", id)
+    .execute();
 }
 
-export async function createEmail(email: NewEmail) {
+export async function createEmail(email: EmailData) {
   return await db
     .insertInto("email")
-    .values(email)
+    .values({
+      ...email,
+      created_at: new Date().toISOString(),
+      modified_at: new Date().toISOString(),
+    })
     .returningAll()
     .executeTakeFirstOrThrow();
 }
 
-export async function deleteEmail(id: number) {
+export async function deleteEmail(id: string) {
   return await db
     .deleteFrom("email")
     .where("id", "=", id)
